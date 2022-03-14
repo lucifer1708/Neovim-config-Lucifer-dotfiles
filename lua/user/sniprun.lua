@@ -1,4 +1,3 @@
 require'sniprun'.setup({
-    display = {"NvimNotify"},
-    -- display = { "Classic" },
+    display = { "Classic" },
 })
