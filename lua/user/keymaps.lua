@@ -1,7 +1,6 @@
 local opts = { noremap = true, silent = true }
 
 local term_opts = { silent = true }
-
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
@@ -67,3 +66,12 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
+-- Saving And Quiting vim
+keymap("n", "<C-s>", ":w<CR>", opts)
+keymap("n", "<C-q>", ":q<CR>", opts)
+keymap("i", "<C-s>", "<Esc>:w<CR>a", opts)
+
+
+-- For Running the code using Sniprun
+keymap("n", "<C-R>", ":SnipRun<CR>", opts)
+keymap("v", "<C-R>", ":SnipRun<CR>", opts)

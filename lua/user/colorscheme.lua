@@ -1,8 +1,9 @@
 vim.cmd [[
 try
-  colorscheme onedarker
+  colorscheme codemonkey 
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
   set background=dark
 endtry
 ]]
+-- This is a comment
