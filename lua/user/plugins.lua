@@ -59,6 +59,7 @@ return packer.startup(function(use)
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
   use "terrortylor/nvim-comment"
+  use "NvChad/nvim-base16.lua"
 
   -- Colorschemes
   use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
@@ -74,14 +75,25 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-nvim-lsp"
 
   -- snippets
-  use "L3MON4D3/LuaSnip" --snippet engine
+  use { 'L3MON4D3/LuaSnip' }  --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
   use "norcalli/nvim-colorizer.lua"
   use "mlaursen/vim-react-snippets" -- React Snippets
+  use {
+  "mattn/emmet-vim",
+  setup = function () -- load stuff before the plugin is loaded
+    vim.g.user_emmet_leader_key = '<c-m>'
+
+    vim.g.user_emmet_settings = {
+      indent_blockelement = 1,
+    }
+  end
+} --Emmet Like Vscode
+
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
-  use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
+  use "tamago324/nlsp-settings.nvim" -- language server settings defined in json form
   use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
   -- Telescope

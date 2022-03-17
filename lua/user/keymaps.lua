@@ -69,9 +69,13 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- Saving And Quiting vim
 keymap("n", "<C-s>", ":w<CR>", opts)
 keymap("n", "<C-q>", ":q<CR>", opts)
+keymap("i", "<C-q>", "<Esc>:q<CR>", opts)
+keymap("n", "<A-q>", ":q!<CR>", opts)
+keymap("i", "<A-q>", "<Esc>:q!<CR>", opts)
 keymap("i", "<C-s>", "<Esc>:w<CR>a", opts)
 
 
 -- For Running the code using Sniprun
-keymap("n", "<C-R>", ":SnipRun<CR>", opts)
-keymap("v", "<C-R>", ":SnipRun<CR>", opts)
+keymap("n", "<A-R>", ":SnipRun<CR>", opts)
+keymap("v", "<A-R>", ":SnipRun<CR>", opts)
+

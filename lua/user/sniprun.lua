@@ -1,3 +1,3 @@
 require'sniprun'.setup({
-    display = { "Classic" },
+    display = { "Terminal" },
 })
