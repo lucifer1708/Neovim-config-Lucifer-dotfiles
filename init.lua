@@ -22,3 +22,5 @@ require "user.autocommands"
 require "user.nvim-comment"
 require "user.colorizer"
 require "user.sniprun"
+require "user.emmet"
+

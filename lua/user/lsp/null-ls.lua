@@ -11,12 +11,13 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup({
 	debug = false,
 	sources = {
-		formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
+		formatting.prettier.with({ extra_args = { "--single-quote", "--jsx-single-quote" } }),
 		-- formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.autopep8,
-		formatting.eslint,
+		-- formatting.eslint,
 		formatting.stylua,
-    diagnostics.flake8
+    diagnostics.flake8,
+    diagnostics.eslint,
 	},
  -- you can reuse a shared lspconfig on_attach callback here
     -- on_attach = function(client)
