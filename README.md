@@ -1,5 +1,10 @@
 # Lucifer's Neovim Configurations
 -------------------
+![enter image description here](https://imgur.com/t5dnsuu.png)
+![enter image description here](https://imgur.com/AJbAS7L.png)
+![enter image description here](https://imgur.com/Xza3Nas.png)
+> ## To use Find text functionality, you need to install ripgrep.![enter image description here](https://imgur.com/FanZl0e.png)
+![enter image description here](https://imgur.com/OuQI6vW.png)
 ### This config is a full IDE setup.  You can fork this repo and change the configs. Also you can contribute to this repo.
 
 > If you want to change the dashboard just copy paste ASCII Text from any website and paste there.
