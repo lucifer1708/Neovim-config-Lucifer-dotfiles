@@ -35,7 +35,7 @@ local setup = {
   },
   icons = {
     breadcrumb = "»", -- symbol used in the command line area that shows your active key combo
-    separator = "➜", -- symbol used between a key and it's label
+    separator = ":", -- symbol ➜ used between a key and it's label
     group = "+", -- symbol prepended to a group
   },
   popup_mappings = {
@@ -50,7 +50,7 @@ local setup = {
     winblend = 0,
   },
   layout = {
-    height = { min = 4, max = 25 }, -- min and max height of the columns
+    height = { min = 3, max = 25 }, -- min and max height of the columns
     width = { min = 20, max = 50 }, -- min and max width of the columns
     spacing = 3, -- spacing between columns
     align = "left", -- align columns left, center or right
@@ -66,7 +66,7 @@ local setup = {
     -- most people should not need to change this
     i = { "j", "k" },
     v = { "j", "k" },
-  },
+   },
 }
 
 local opts = {
@@ -86,6 +86,7 @@ local mappings = {
   },
   ["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
   ["w"] = { "<cmd>w!<CR>", "Save" },
+  ["/"] = { "<cmd>CommentToggle<CR>", "Comment line?" },
   ["q"] = { "<cmd>q!<CR>", "Quit" },
   ["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" },
   ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
@@ -174,7 +175,6 @@ local mappings = {
   t = {
     name = "Terminal",
     n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
-    u = { "<cmd>lua _NCDU_TOGGLE()<cr>", "NCDU" },
     t = { "<cmd>lua _HTOP_TOGGLE()<cr>", "Htop" },
     p = { "<cmd>lua _PYTHON_TOGGLE()<cr>", "Python" },
     f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
