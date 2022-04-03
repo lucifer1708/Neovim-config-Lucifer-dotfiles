@@ -14,7 +14,7 @@ null_ls.setup({
 		formatting.prettier.with({ extra_args = { "--single-quote", "--jsx-single-quote" } }),
 		-- formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.autopep8,
-		-- formatting.eslint,
+		formatting.eslint,
 		-- formatting.stylua,
     diagnostics.flake8,
     diagnostics.eslint,

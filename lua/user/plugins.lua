@@ -62,10 +62,8 @@ return packer.startup(function(use)
   use "NvChad/nvim-base16.lua"
 
   -- Colorschemes
-  use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-  use "lunarvim/darkplus.nvim"
-  use 'navarasu/onedark.nvim'
-
+  use "LunarVim/Colorschemes"
+  
   -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
   use "hrsh7th/cmp-buffer" -- buffer completions
@@ -78,6 +76,7 @@ return packer.startup(function(use)
   use { 'L3MON4D3/LuaSnip' }  --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
   use "norcalli/nvim-colorizer.lua"
+
   use "mlaursen/vim-react-snippets" -- React Snippets
   use {
   "mattn/emmet-vim",
@@ -89,6 +88,7 @@ return packer.startup(function(use)
     }
   end
 } --Emmet Like Vscode
+
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
@@ -105,9 +105,6 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
   use "JoosepAlviste/nvim-ts-context-commentstring"
-
-  -- Styled Components
-  use "styled-components/vim-styled-components"
 
   -- Git
   use "lewis6991/gitsigns.nvim"
