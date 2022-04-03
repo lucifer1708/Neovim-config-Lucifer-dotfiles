@@ -45,7 +45,6 @@ return packer.startup(function(use)
   use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
   use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
   use "windwp/nvim-autopairs" -- Autopairs, integrates with both cmp and treesitter
-  use "numToStr/Comment.nvim" -- Easily comment stuff
   use "kyazdani42/nvim-web-devicons"
   use "kyazdani42/nvim-tree.lua"
   use "akinsho/bufferline.nvim"
@@ -58,7 +57,7 @@ return packer.startup(function(use)
   use "goolord/alpha-nvim"
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
-  use "terrortylor/nvim-comment"
+  use "terrortylor/nvim-comment" -- Easily comment stuff
   use "NvChad/nvim-base16.lua"
 
   -- Colorschemes
@@ -75,9 +74,8 @@ return packer.startup(function(use)
   -- snippets
   use { 'L3MON4D3/LuaSnip' }  --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
-  use "norcalli/nvim-colorizer.lua"
 
-  use "mlaursen/vim-react-snippets" -- React Snippets
+  use {"mlaursen/vim-react-snippets", filetype={'jsx', 'js'}} -- React Snippets
   use {
   "mattn/emmet-vim",
   setup = function () -- load stuff before the plugin is loaded
