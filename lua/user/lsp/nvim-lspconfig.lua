@@ -18,7 +18,6 @@ if not configs.ls_emmet then
 				"xml",
 				"xsl",
 				"pug",
-				"htmldjango",
 				"slim",
 				"sass",
 				"stylus",
