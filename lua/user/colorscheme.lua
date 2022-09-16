@@ -1,7 +1,7 @@
 require("material").setup({
 	contrast = {
 		sidebars = true, -- Enable contrast for sidebar-like windows ( for example Nvim-Tree )
-		floating_windows = false, -- Enable contrast for floating windows
+		floating_windows = true, -- Enable contrast for floating windows
 		line_numbers = false, -- Enable contrast background for line numbers
 		sign_column = false, -- Enable contrast background for the sign column
 		cursor_line = false, -- Enable darker background for the cursor line
@@ -13,8 +13,8 @@ require("material").setup({
 		comments = true, -- Enable italic comments
 		keywords = false, -- Enable italic keywords
 		functions = true, -- Enable italic functions
-		strings = false, -- Enable italic strings
-		variables = false, -- Enable italic variables
+		strings = false, -- enable italic strings
+		variables = false, -- enable italic variables
 	},
 
 	contrast_filetypes = { -- Specify which filetypes get the contrasted (darker) background
@@ -64,4 +64,4 @@ require("material").setup({
 })
 
 vim.g.material_style = "deep ocean"
-vim.cmd 'colorscheme material'
+vim.cmd("colorscheme material")
