@@ -107,7 +107,7 @@ require'fzf-lua'.setup {
     },
     fzf = {
       -- fzf '--bind=' options
-      ["ctrl-z"]      = "abort",
+      ["ctrl-q"]      = "abort",
       ["ctrl-u"]      = "unix-line-discard",
       ["ctrl-f"]      = "half-page-down",
       ["ctrl-b"]      = "half-page-up",
@@ -186,7 +186,7 @@ require'fzf-lua'.setup {
     bat = {
       cmd             = "bat",
       args            = "--style=numbers,changes --color always",
-      theme           = 'Coldark-Dark', -- bat preview theme (bat --list-themes)
+      theme           = 'base16', -- bat preview theme (bat --list-themes)
       config          = nil,            -- nil uses $BAT_CONFIG_PATH
     },
     head = {

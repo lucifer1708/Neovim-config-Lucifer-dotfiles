@@ -100,7 +100,7 @@ local mappings = {
 		"<cmd>FzfLua files<cr>",
 		"Find files",
 	},
-	["F"] = { "<cmd>FzfLua grep_cword <cr>", "Find Text" },
+	["F"] = { "<cmd>FzfLua live_grep<cr>", "Find Text" },
 	["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 
 	p = {
@@ -127,8 +127,8 @@ local mappings = {
 			"Undo Stage Hunk",
 		},
 		o = { "<cmd>FzfLua git_status<cr>", "Open changed file" },
-		b = { "<cmd>Fzflua git_branches<cr>", "Checkout branch" },
-		c = { "<cmd>fzfLua git_commits <cr>", "Checkout commit" },
+		b = { "<cmd>FzfLua git_branches<cr>", "Checkout branch" },
+		c = { "<cmd>FzfLua git_commits <cr>", "Checkout commit" },
 		d = {
 			"<cmd>Gitsigns diffthis HEAD<cr>",
 			"Diff",

@@ -23,10 +23,3 @@ require("user.colorscheme")
 -- require "user.colorizer"
 -- require("user.sniprun")
 
---Lua:
-vim.api.nvim_set_keymap(
-	"n",
-	"mm",
-	[[<Cmd>lua require('material.functions').toggle_style()<CR>]],
-	{ noremap = true, silent = true }
-)
