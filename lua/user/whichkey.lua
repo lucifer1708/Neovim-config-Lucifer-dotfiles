@@ -168,14 +168,14 @@ local mappings = {
 	},
 	s = {
 		name = "Search",
-		b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
-		c = { "<cmd>Telescope colorscheme<cr>", "Colorscheme" },
-		h = { "<cmd>Telescope help_tags<cr>", "Find Help" },
-		M = { "<cmd>Telescope man_pages<cr>", "Man Pages" },
-		r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
-		R = { "<cmd>Telescope registers<cr>", "Registers" },
-		k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
-		C = { "<cmd>Telescope commands<cr>", "Commands" },
+		b = { "<cmd>FzfLua git_branches<cr>", "Checkout branch" },
+		c = { "<cmd>FzfLua colorschemes<cr>", "Colorscheme" },
+		h = { "<cmd>FzfLua help_tags<cr>", "Find Help" },
+		M = { "<cmd>FzfLua man_pages<cr>", "Man Pages" },
+		r = { "<cmd>FzfLua oldfiles<cr>", "Open Recent File" },
+		R = { "<cmd>FzfLua registers<cr>", "Registers" },
+		k = { "<cmd>FzfLua keymaps<cr>", "Keymaps" },
+		C = { "<cmd>FzfLua commands<cr>", "Commands" },
 	},
 
 	t = {
