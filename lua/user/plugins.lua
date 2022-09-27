@@ -60,8 +60,10 @@ return packer.startup(function(use)
 	use("terrortylor/nvim-comment") -- Easily comment stuff
 
 	-- Colorschemes
-	use("folke/tokyonight.nvim")
-	use("marko-cerovac/material.nvim")
+	use("projekt0n/github-nvim-theme")
+	use("tiagovla/tokyodark.nvim")
+	use({ "Everblush/everblush.nvim", as = "everblush" })
+
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
 	use("hrsh7th/cmp-buffer") -- buffer completions
