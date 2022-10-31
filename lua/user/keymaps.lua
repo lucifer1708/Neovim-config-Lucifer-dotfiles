@@ -9,7 +9,7 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Modes
+-- MODES
 --   normal_mode = "n",
 --   insert_mode = "i",
 --   visual_mode = "v",
@@ -81,5 +81,8 @@ keymap("i", "<A-q>", "<Esc>:q!<CR>", opts)
 keymap("i", "<C-s>", "<Esc>:w<CR>a", opts)
 
 -- For Running the code using Sniprun
-keymap("n", "<A-R>", ":SnipRun<CR>", opts)
-keymap("v", "<A-R>", ":SnipRun<CR>", opts)
+-- keymap("n", "<A-R>", ":SnipRun<CR>", opts)
+-- keymap("v", "<A-R>", ":SnipRun<CR>", opts)
+
+keymap("n", "<A-R>", ":!javac % <CR>", opts)
+keymap("n", "<A-r>", ":TermExec cmd='java -cp %:p:h %:t:r'<CR>", opts)

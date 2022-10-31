@@ -11,7 +11,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
 		"https://github.com/wbthomason/packer.nvim",
 		install_path,
 	})
-	print("Installing packer close and reopen Neovim...")
+print("Installing packer close and reopen Neovim...")
 	vim.cmd([[packadd packer.nvim]])
 end
 
@@ -63,7 +63,15 @@ return packer.startup(function(use)
 	use("projekt0n/github-nvim-theme")
 	use("tiagovla/tokyodark.nvim")
 	use({ "Everblush/everblush.nvim", as = "everblush" })
-
+use {
+	"catppuccin/nvim",
+	as = "catppuccin",
+	config = function()
+		vim.g.catppuccin_flavour = "macchiato" -- latte, frappe, macchiato, mocha
+		require("catppuccin").setup()
+		vim.api.nvim_command "colorscheme catppuccin"
+	end
+}
 	-- cmp plugins
 	use("hrsh7th/nvim-cmp") -- The completion plugin
 	use("hrsh7th/cmp-buffer") -- buffer completions
@@ -98,7 +106,7 @@ return packer.startup(function(use)
 	use("lewis6991/gitsigns.nvim")
 
 	-- Code runner
-	-- use({ "michaelb/sniprun", run = "bash ./install.sh" })
+	use({ "michaelb/sniprun", run = "bash ./install.sh" })
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

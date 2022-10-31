@@ -1,6 +1,92 @@
-local everblush = require("everblush")
-
-everblush.setup({
+require("catppuccin").setup({
+	compile_path = vim.fn.stdpath("cache") .. "/catppuccin",
 	transparent_background = true,
-	nvim_tree = { contrast = false},
+	term_colors = true,
+	dim_inactive = {
+    enabled = false,
+		shade = "dark",
+		percentage = 0.15,
+	},
+	styles = {
+		comments = { "italic" },
+		conditionals = { "italic" },
+		loops = {"bold"},
+		functions = {"bold", "italic"},
+		keywords = {},
+		strings = {},
+		variables = {},
+		numbers = {},
+		booleans = {},
+		properties = {},
+		types = {},
+		operators = {},
+	},
+	integrations = {
+    bufferline = true,
+		cmp = true,
+		dashboard = true,
+		fern = false,
+		fidget = false,
+		gitgutter = false,
+		gitsigns = true,
+		harpoon = false,
+		hop = false,
+		illuminate = false,
+		leap = false,
+		lightspeed = false,
+		lsp_saga = true,
+		lsp_trouble = true,
+		markdown = true,
+		mini = false,
+		neogit = false,
+		neotest = false,
+		neotree = false,
+		notify = true,
+		nvimtree = true,
+		overseer = false,
+		pounce = false,
+		symbols_outline = false,
+		telekasten = false,
+		telescope = true,
+		treesitter = true,
+		treesitter_context = true,
+		ts_rainbow = false,
+		vim_sneak = false,
+		vimwiki = false,
+		which_key = true,
+dap = {
+			enabled = false,
+			enable_ui = false,
+		},
+indent_blankline = {
+			enabled = true,
+			colored_indent_levels = true,
+		},
+		native_lsp = {
+			enabled = true,
+			virtual_text = {
+				errors = { "italic" },
+				hints = { "italic" },
+				warnings = { "italic" },
+				information = { "italic" },
+			},
+			underlines = {
+				errors = { "underline" },
+				hints = { "underline" },
+				warnings = { "underline" },
+				information = { "underline" },
+			},
+		},
+		navic = {
+			enabled = false,
+			custom_bg = "NONE",
+		},
+	},
+	color_overrides = {},
+	custom_highlights = {},
+
 })
+
+
+
+
