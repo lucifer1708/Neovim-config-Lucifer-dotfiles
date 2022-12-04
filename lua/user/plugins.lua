@@ -82,7 +82,9 @@ use {
 	use("hrsh7th/vim-vsnip")
 	use("hrsh7th/cmp-vsnip")
 	use({ "ibhagwan/fzf-lua", requires = { "kyazdani42/nvim-web-devicons" } })
+
 	-- snippets
+  use('norcalli/nvim-colorizer.lua')
 	use({ "L3MON4D3/LuaSnip" }) --snippet engine
 	use("rafamadriz/friendly-snippets") -- a bunch of snippets to use
 

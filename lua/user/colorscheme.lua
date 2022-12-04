@@ -1,17 +1,22 @@
 require("catppuccin").setup({
+	flavour = "mocha", -- latte, frappe, macchiato, mocha
+	background = { -- :h background
+		light = "latte",
+		dark = "mocha",
+	},
 	compile_path = vim.fn.stdpath("cache") .. "/catppuccin",
 	transparent_background = true,
-	term_colors = true,
+	term_colors = false,
 	dim_inactive = {
-    enabled = false,
+		enabled = false,
 		shade = "dark",
 		percentage = 0.15,
 	},
 	styles = {
 		comments = { "italic" },
 		conditionals = { "italic" },
-		loops = {"bold"},
-		functions = {"bold", "italic"},
+		loops = {},
+		functions = {},
 		keywords = {},
 		strings = {},
 		variables = {},
@@ -21,9 +26,14 @@ require("catppuccin").setup({
 		types = {},
 		operators = {},
 	},
+	color_overrides = {},
+	custom_highlights = {},
 	integrations = {
-    bufferline = true,
+		aerial = false,
+		barbar = false,
+		beacon = false,
 		cmp = true,
+		coc_nvim = false,
 		dashboard = true,
 		fern = false,
 		fidget = false,
@@ -34,33 +44,38 @@ require("catppuccin").setup({
 		illuminate = false,
 		leap = false,
 		lightspeed = false,
-		lsp_saga = true,
-		lsp_trouble = true,
+		lsp_saga = false,
+		lsp_trouble = false,
 		markdown = true,
+		mason = true,
 		mini = false,
 		neogit = false,
 		neotest = false,
 		neotree = false,
-		notify = true,
+		noice = false,
+		notify = false,
 		nvimtree = true,
 		overseer = false,
 		pounce = false,
+		semantic_tokens = false,
 		symbols_outline = false,
 		telekasten = false,
 		telescope = true,
 		treesitter = true,
-		treesitter_context = true,
+		treesitter_context = false,
 		ts_rainbow = false,
 		vim_sneak = false,
 		vimwiki = false,
-		which_key = true,
-dap = {
+		which_key = false,
+
+		-- Special integrations, see https://github.com/catppuccin/nvim#special-integrations
+		dap = {
 			enabled = false,
 			enable_ui = false,
 		},
-indent_blankline = {
+		indent_blankline = {
 			enabled = true,
-			colored_indent_levels = true,
+			colored_indent_levels = false,
 		},
 		native_lsp = {
 			enabled = true,
@@ -82,11 +97,4 @@ indent_blankline = {
 			custom_bg = "NONE",
 		},
 	},
-	color_overrides = {},
-	custom_highlights = {},
-
 })
-
-
-
-
