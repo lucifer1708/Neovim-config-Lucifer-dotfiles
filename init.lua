@@ -1,3 +1,4 @@
+require("user.lsp")
 require("user.options")
 require("user.keymaps")
 require("user.plugins")
@@ -21,5 +22,5 @@ require("user.fzf")
 require("user.nvim-comment")
 require("user.colorscheme")
 require "user.colorizer"
--- require("user.sniprun")
+require("user.sniprun")
 

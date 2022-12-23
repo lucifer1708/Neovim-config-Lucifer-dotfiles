@@ -105,15 +105,15 @@ _G.packer_plugins = {
     path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
   },
-  ["cmp-cmdline"] = {
-    loaded = true,
-    path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/cmp-cmdline",
-    url = "https://github.com/hrsh7th/cmp-cmdline"
-  },
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["cmp-nvim-lua"] = {
+    loaded = true,
+    path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua",
+    url = "https://github.com/hrsh7th/cmp-nvim-lua"
   },
   ["cmp-path"] = {
     loaded = true,
@@ -165,10 +165,25 @@ _G.packer_plugins = {
     path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
     url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
+  ["lsp-zero.nvim"] = {
+    loaded = true,
+    path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
+    url = "https://github.com/VonHeikemen/lsp-zero.nvim"
+  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["mason-lspconfig.nvim"] = {
+    loaded = true,
+    path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
   },
   ["nlsp-settings.nvim"] = {
     loaded = true,
@@ -199,11 +214,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/nvim-comment",
     url = "https://github.com/terrortylor/nvim-comment"
-  },
-  ["nvim-lsp-installer"] = {
-    loaded = true,
-    path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
-    url = "https://github.com/williamboman/nvim-lsp-installer"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
