@@ -57,13 +57,10 @@ return packer.startup(function(use)
 	use("goolord/alpha-nvim")
 	use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight
 	use("folke/which-key.nvim")
-	-- use({ "williamboman/mason.nvim" })
+  use 'karb94/neoscroll.nvim'
 	use("terrortylor/nvim-comment") -- Easily comment stuff
 
 	-- Colorschemes
-	use("projekt0n/github-nvim-theme")
-	use("tiagovla/tokyodark.nvim")
-	use({ "Everblush/everblush.nvim", as = "everblush" })
 	use({
 		"catppuccin/nvim",
 		as = "catppuccin",
@@ -73,13 +70,7 @@ return packer.startup(function(use)
 			vim.api.nvim_command("colorscheme catppuccin")
 		end,
 	})
-	-- cmp plugins
-	-- use("hrsh7th/nvim-cmp") -- The completion plugin
-	-- use("hrsh7th/cmp-buffer") -- buffer completions
-	-- use("hrsh7th/cmp-path") -- path completions
-	-- use("hrsh7th/cmp-cmdline") -- cmdline completions
-	-- use("saadparwaiz1/cmp_luasnip") -- snippet completions
-	-- use("hrsh7th/cmp-nvim-lsp")
+  -- cmp plugins
 	use("hrsh7th/vim-vsnip")
 	use("hrsh7th/cmp-vsnip")
 use {

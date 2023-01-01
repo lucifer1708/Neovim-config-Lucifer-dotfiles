@@ -23,4 +23,5 @@ require("user.nvim-comment")
 require("user.colorscheme")
 require "user.colorizer"
 require("user.sniprun")
+require("user.neoscroll")
 

@@ -130,11 +130,6 @@ _G.packer_plugins = {
     path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  everblush = {
-    loaded = true,
-    path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/everblush",
-    url = "https://github.com/Everblush/everblush.nvim"
-  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -144,11 +139,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/fzf-lua",
     url = "https://github.com/ibhagwan/fzf-lua"
-  },
-  ["github-nvim-theme"] = {
-    loaded = true,
-    path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/github-nvim-theme",
-    url = "https://github.com/projekt0n/github-nvim-theme"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
@@ -184,6 +174,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["neoscroll.nvim"] = {
+    loaded = true,
+    path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/neoscroll.nvim",
+    url = "https://github.com/karb94/neoscroll.nvim"
   },
   ["nlsp-settings.nvim"] = {
     loaded = true,
@@ -274,11 +269,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
-  },
-  ["tokyodark.nvim"] = {
-    loaded = true,
-    path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/tokyodark.nvim",
-    url = "https://github.com/tiagovla/tokyodark.nvim"
   },
   ["vim-bbye"] = {
     loaded = true,
