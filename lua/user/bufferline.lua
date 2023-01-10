@@ -1,6 +1,5 @@
 local status_ok, bufferline = pcall(require, "bufferline")
 
-local mocha = require("catppuccin.palettes").get_palette "mocha"
 if not status_ok then
   return
 end
@@ -74,18 +73,4 @@ bufferline.setup {
     -- end
   },
  
-  highlights = require("catppuccin.groups.integrations.bufferline").get {
-    styles = { "italic", "bold" },
-    custom = {
-      all = {
-        fill = { bg = "#000000" },
-      },
-      mocha = {
-        background = { fg = mocha.text },
-      },
-      latte = {
-        background = { fg = "#000000" },
-      },
-    },
-  },
 }
