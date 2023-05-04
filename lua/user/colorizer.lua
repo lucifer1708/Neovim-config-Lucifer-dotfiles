@@ -1,5 +1,8 @@
-require 'colorizer'.setup({
-  'css';
-  'javascript';
-  html = { mode = 'background' };
-}, { mode = 'foreground' })
+vim.opt.termguicolors = true
+
+local ccc = require("ccc")
+local mapping = ccc.mapping
+ccc.setup({
+  -- Your favorite settings
+})
+

@@ -20,6 +20,9 @@ require("user.autocommands")
 require("user.fzf")
 require("user.nvim-comment")
 require "user.colorizer"
-require("user.sniprun")
+-- require("user.sniprun")
 require("user.neoscroll")
 require("user.colorscheme")
+-- Language Servers Config
+require("user.gopls")
+require("user.bashls")
