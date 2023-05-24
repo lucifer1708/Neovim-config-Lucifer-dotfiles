@@ -1,0 +1,15 @@
+{
+    "workspace.library": [
+        "/usr/share/nvim/runtime/lua",
+        "/home/lucifer/.config/nvim/lua",
+        "/tmp/lua-language-server.zHz1/meta/2fbf1d71",
+        "/tmp/lua-language-server.zHz1/meta/195b723e",
+        "/tmp/lua-language-server.AOKX/meta/2fbf1d71",
+        "/tmp/lua-language-server.Wkit/meta/2fbf1d71",
+        "/tmp/lua-language-server.Wkit/meta/195b723e",
+        "/tmp/lua-language-server.iDLi/meta/2fbf1d71",
+        "/tmp/lua-language-server.rgQa/meta/2fbf1d71",
+        "/tmp/lua-language-server.rgQa/meta/195b723e",
+        "/tmp/lua-language-server.zV2I/meta/2fbf1d71"
+    ]
+}

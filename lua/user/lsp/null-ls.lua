@@ -13,10 +13,10 @@ null_ls.setup({
      sources = {
           formatting.prettier.with({ extra_args = { "--single-quote", "--jsx-single-quote" } }),
           -- formatting.black.with({ extra_args = { "--fast" } }),
-          formatting.black,
-          -- formatting.autopep8,
+          -- formatting.black,
+          formatting.autopep8,
           formatting.stylua,
-          diagnostics.flake8,
+          diagnostics.flake8.with({ extra_args = { "--max-line-length", "150" } }),
           -- diagnostics.eslint,
      },
      -- you can reuse a shared lspconfig on_attach callback here

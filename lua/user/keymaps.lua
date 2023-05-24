@@ -83,3 +83,4 @@ keymap("i", "<C-s>", "<Esc>:w<CR>a", opts)
 -- For Running the code using Sniprun
 keymap("n", "<A-R>", ":SnipRun<CR>", opts)
 keymap("v", "<A-R>", ":SnipRun<CR>", opts)
+
