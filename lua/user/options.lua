@@ -26,13 +26,14 @@ local options = {
   tabstop = 5, -- insert 2 spaces for a tab
   cursorline = true, -- highlight the current line
   number = true, -- set numbered lines
-  relativenumber = false, -- set relative numbered lines
+  relativenumber = true, -- set relative numbered lines
   numberwidth = 1, -- set number column width to 2 {default 4}
   signcolumn = "yes", -- always show the sign column, otherwise it would shift the text each time
   wrap = true, -- display lines as one long line
   scrolloff = 4,
   sidescrolloff = 8,
-  guifont = "JetBrainsMono Nerd Font:h8", -- the font used in graphical neovim applications
+  guifont = "Cascadia Code:h10", -- the font used in graphical neovim applications
+  -- guicursor="a:blinkon100",
 }
 
 vim.opt.shortmess:append("c")

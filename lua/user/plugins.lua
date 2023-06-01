@@ -85,16 +85,18 @@ return packer.startup(function(use)
      use { 'williamboman/mason.nvim' }
      use { 'williamboman/mason-lspconfig.nvim' }
      -- Autocompletion
-     use {"github/copilot.vim"}
+     use { "github/copilot.vim" }
      use { 'hrsh7th/nvim-cmp' }
      use { 'hrsh7th/cmp-buffer' }
      use { 'hrsh7th/cmp-path' }
      use { 'saadparwaiz1/cmp_luasnip' }
      use { 'hrsh7th/cmp-nvim-lsp' }
      use { 'hrsh7th/cmp-nvim-lua' }
+     use {"ray-x/cmp-treesitter"}
+     use { 'f3fora/cmp-spell' }
+     use { "tzachar/cmp-tabnine", run = "./install.sh" }
      -- Snippets
      use { 'L3MON4D3/LuaSnip' }
-     use { 'rafamadriz/friendly-snippets' }
      use {
           'VonHeikemen/lsp-zero.nvim',
           requires = {
@@ -110,6 +112,7 @@ return packer.startup(function(use)
                { 'saadparwaiz1/cmp_luasnip' },
                { 'hrsh7th/cmp-nvim-lsp' },
                { 'hrsh7th/cmp-nvim-lua' },
+               { 'f3fora/cmp-spell' },
 
                -- Snippets
                { 'L3MON4D3/LuaSnip' },
