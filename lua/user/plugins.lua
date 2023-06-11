@@ -61,24 +61,15 @@ return packer.startup(function(use)
      use("terrortylor/nvim-comment") -- Easily comment stuff
 
      -- Colorschemes
+     use 'tiagovla/tokyodark.nvim'
      use { 'Everblush/nvim', as = 'everblush' }
-     use("sainnhe/edge")
-     use({
-          "neanias/everforest-nvim",
-          -- Optional; default configuration will be used if setup isn't called.
-          config = function()
-               require("everforest").setup()
-          end,
-     })
-     use({
-          'rose-pine/neovim',
-          as = 'rose-pine',
-     })
-     use("cpea2506/one_monokai.nvim")
-     use("tiagovla/tokyodark.nvim")
      -- cmp plugins
      use("hrsh7th/vim-vsnip")
      use("hrsh7th/cmp-vsnip")
+     -- Completion
+     use { 'ms-jpq/coq_nvim', branch = "coq" }
+     use { "ms-jpq/coq.artifacts", branch = 'artifacts' }
+     use { "ms-jpq/coq.thirdparty", branch = '3p' }
 
      --      -- LSP Support
      use { 'neovim/nvim-lspconfig' }
@@ -92,7 +83,7 @@ return packer.startup(function(use)
      use { 'saadparwaiz1/cmp_luasnip' }
      use { 'hrsh7th/cmp-nvim-lsp' }
      use { 'hrsh7th/cmp-nvim-lua' }
-     use {"ray-x/cmp-treesitter"}
+     use { "ray-x/cmp-treesitter" }
      use { 'f3fora/cmp-spell' }
      use { "tzachar/cmp-tabnine", run = "./install.sh" }
      -- Snippets

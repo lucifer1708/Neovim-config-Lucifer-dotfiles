@@ -149,21 +149,25 @@ _G.packer_plugins = {
     path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/copilot.vim",
     url = "https://github.com/github/copilot.vim"
   },
-  edge = {
+  ["coq.artifacts"] = {
     loaded = true,
-    path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/edge",
-    url = "https://github.com/sainnhe/edge"
+    path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/coq.artifacts",
+    url = "https://github.com/ms-jpq/coq.artifacts"
+  },
+  ["coq.thirdparty"] = {
+    loaded = true,
+    path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/coq.thirdparty",
+    url = "https://github.com/ms-jpq/coq.thirdparty"
+  },
+  coq_nvim = {
+    loaded = true,
+    path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/coq_nvim",
+    url = "https://github.com/ms-jpq/coq_nvim"
   },
   everblush = {
     loaded = true,
     path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/everblush",
     url = "https://github.com/Everblush/nvim"
-  },
-  ["everforest-nvim"] = {
-    config = { "\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15everforest\frequire\0" },
-    loaded = true,
-    path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/everforest-nvim",
-    url = "https://github.com/neanias/everforest-nvim"
   },
   ["friendly-snippets"] = {
     loaded = true,
@@ -275,11 +279,6 @@ _G.packer_plugins = {
     path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
-  ["one_monokai.nvim"] = {
-    loaded = true,
-    path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/one_monokai.nvim",
-    url = "https://github.com/cpea2506/one_monokai.nvim"
-  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -299,11 +298,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/project.nvim",
     url = "https://github.com/ahmedkhalf/project.nvim"
-  },
-  ["rose-pine"] = {
-    loaded = true,
-    path = "/home/lucifer/.local/share/nvim/site/pack/packer/start/rose-pine",
-    url = "https://github.com/rose-pine/neovim"
   },
   sniprun = {
     loaded = true,
@@ -348,10 +342,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: everforest-nvim
-time([[Config for everforest-nvim]], true)
-try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15everforest\frequire\0", "config", "everforest-nvim")
-time([[Config for everforest-nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
