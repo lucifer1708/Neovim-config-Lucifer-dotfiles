@@ -25,7 +25,6 @@ require("user.colorscheme")
 -- Language Servers Config
 require("user.gopls")
 require("user.bashls")
---require("user.coq")
 
 vim.g.copilot_no_tab_map = true
 vim.api.nvim_set_keymap("i", "<C-j>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
@@ -53,10 +52,15 @@ vim.g.coq_settings = {
      ["keymap.manual_complete"] = 'C-p',
      ["clients.lsp.enabled"] = true,
      ["clients.tree_sitter.enabled"] = true,
-     ["clients.tabnine.enabled"] = true,
+     ["clients.tabnine.enabled"] = false,
      ["clients.snippets.enabled"] = true,
      ["clients.buffers.enabled"] = true,
      ["clients.buffers.always_on_top"] = false,
      ["clients.tmux.enabled"] = false,
-     ['display.pum.fast_close']=false,
+     ['display.pum.fast_close'] = false,
+}
+require("coq_3p") {
+     { src = "nvimlua", short_name = "nLUA" },
+     { src = "vimtex",  short_name = "vTEX" },
+     { src = "copilot", short_name = "COP", accept_key = "<c-f>" },
 }
