@@ -1,9 +1,17 @@
 local status_ok, _ = pcall(require, "lspconfig")
 if not status_ok then
-  return
+	return
 end
 
-require "user.lsp.lsp-installer"
+require("user.lsp.lsp-installer")
 require("user.lsp.handlers").setup()
-require "user.lsp.null-ls"
-require "user.lsp.nvim-lspconfig"
+require("user.lsp.null-ls")
+require("user.lsp.nvim-lspconfig")
+
+local opts = {
+	on_attach = on_attach,
+	-- capabilities = capabilities, -- for nvim-cmp
+	flags = {
+		debounce_text_changes = 150,
+	},
+}

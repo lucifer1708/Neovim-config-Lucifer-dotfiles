@@ -1,8 +1,8 @@
 require("user.options")
+require("user.lsp-zero")
 require("user.lsp")
 require("user.keymaps")
 require("user.plugins")
--- require("user.cmp")
 require("user.telescope")
 require("user.treesitter")
 require("user.autopairs")
@@ -48,17 +48,18 @@ vim.g.copilot_filetypes = {
 vim.o.completeopt = "menu,menuone,noselect"
 vim.g.coq_settings = {
      ["auto_start"] = 'shut-up',
-     ["keymap.jump_to_mark"] = 'M-m',
      ["keymap.manual_complete"] = 'C-p',
      ["clients.lsp.enabled"] = true,
-     ["clients.tree_sitter.enabled"] = true,
+     ["clients.tree_sitter.enabled"] = false,
      ["clients.tabnine.enabled"] = false,
      ["clients.snippets.enabled"] = true,
      ["clients.buffers.enabled"] = true,
      ["clients.buffers.always_on_top"] = false,
      ["clients.tmux.enabled"] = false,
-     ['display.pum.fast_close'] = false,
+     ['display.pum.fast_close'] = true,
+     ["keymap.pre_select"] = false,
 }
+
 require("coq_3p") {
      { src = "nvimlua", short_name = "nLUA" },
      { src = "vimtex",  short_name = "vTEX" },
