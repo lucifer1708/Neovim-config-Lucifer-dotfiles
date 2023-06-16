@@ -10,7 +10,7 @@ require("user.treesitter")
 require("user.gitsigns")
 require("user.nvim-tree")
 require("user.bufferline")
-require("user.lualine")
+require("user.staline")
 require("user.toggleterm")
 require("user.project")
 require("user.impatient")
@@ -61,10 +61,8 @@ vim.g.coq_settings = {
 	["keymap.pre_select"] = false,
 }
 
-
 require("coq_3p")({
 	{ src = "nvimlua", short_name = "nLUA" },
 	{ src = "vimtex", short_name = "vTEX" },
 	{ src = "copilot", short_name = "COP", accept_key = "<c-f>" },
 })
-

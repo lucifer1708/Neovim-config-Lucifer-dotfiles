@@ -56,7 +56,9 @@ return packer.startup(function(use)
 	use("kyazdani42/nvim-tree.lua")
 	use("akinsho/bufferline.nvim")
 	use("moll/vim-bbye")
-	use("nvim-lualine/lualine.nvim")
+	-- use("nvim-lualine/lualine.nvim")
+
+	use("tamton-aquib/staline.nvim")
 	use("akinsho/toggleterm.nvim")
 	use("ahmedkhalf/project.nvim")
 	use("lewis6991/impatient.nvim")
@@ -68,11 +70,11 @@ return packer.startup(function(use)
 	use("terrortylor/nvim-comment") -- Easily comment stuff
 
 	-- Colorschemes
+	use("olimorris/onedarkpro.nvim")
 	use("tiagovla/tokyodark.nvim")
 	use({ "Everblush/nvim", as = "everblush" })
-	-- cmp plugins
-	-- use("hrsh7th/vim-vsnip")
-	-- use("hrsh7th/cmp-vsnip")
+	use("marko-cerovac/material.nvim")
+	use({ "Th3Whit3Wolf/one-nvim" })
 	-- Completion
 	use({ "ms-jpq/coq_nvim", branch = "coq" })
 	use({ "ms-jpq/coq.artifacts", branch = "artifacts" })
@@ -84,17 +86,6 @@ return packer.startup(function(use)
 	use({ "williamboman/mason-lspconfig.nvim" })
 	-- Autocompletion
 	use({ "github/copilot.vim" })
-	-- use { 'hrsh7th/nvim-cmp' }
-	-- use { 'hrsh7th/cmp-buffer' }
-	-- use { 'hrsh7th/cmp-path' }
-	-- use { 'saadparwaiz1/cmp_luasnip' }
-	-- use { 'hrsh7th/cmp-nvim-lsp' }
-	-- use { 'hrsh7th/cmp-nvim-lua' }
-	-- use { "ray-x/cmp-treesitter" }
-	-- use { 'f3fora/cmp-spell' }
-	-- use { "tzachar/cmp-tabnine", run = "./install.sh" }
-	-- Snippets
-	-- use { 'L3MON4D3/LuaSnip' }
 	use({
 		"VonHeikemen/lsp-zero.nvim",
 		requires = {
