@@ -1,5 +1,6 @@
 require("mason").setup()
 require("mason-lspconfig").setup()
+require("leap").add_default_mappings()
 require("user.options")
 require("user.lsp-zero")
 require("user.lsp")
@@ -10,7 +11,8 @@ require("user.treesitter")
 require("user.gitsigns")
 require("user.nvim-tree")
 require("user.bufferline")
-require("user.staline")
+-- require("user.staline")
+require("user.lualine")
 require("user.toggleterm")
 require("user.project")
 require("user.impatient")
@@ -23,19 +25,18 @@ require("user.nvim-comment")
 require("user.colorizer")
 require("user.neoscroll")
 require("user.colorscheme")
--- Language Servers Config
 require("user.gopls")
 require("user.bashls")
-
 vim.g.copilot_no_tab_map = true
 vim.api.nvim_set_keymap("i", "<C-j>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+
 vim.g.copilot_filetypes = {
 	["*"] = false,
 	["javascriptreact"] = true,
 	["typescriptreact"] = true,
 	["javascript"] = true,
 	["typescript"] = true,
-	["lua"] = false,
+	["lua"] = true,
 	["rust"] = true,
 	["c"] = true,
 	["c#"] = true,
@@ -45,7 +46,6 @@ vim.g.copilot_filetypes = {
 	["bash"] = true,
 	["python"] = true,
 }
-
 vim.o.completeopt = "menu,menuone,noselect"
 vim.g.coq_settings = {
 	["auto_start"] = "shut-up",
@@ -66,3 +66,5 @@ require("coq_3p")({
 	{ src = "vimtex", short_name = "vTEX" },
 	{ src = "copilot", short_name = "COP", accept_key = "<c-f>" },
 })
+
+vim.g.did_load_filetypes = 1

@@ -10,7 +10,7 @@ require("staline").setup({
 			{ "StalineFile", "file_name" },
 			" ", -- Filename in different highlight
 		},
-		mid = { "lsp", "lsp_name" }, -- "lsp_name" is still a little buggy
+		mid = { "lsp", "lsp_name", "" }, -- "lsp_name" is still a little buggy
 		right = {
 			{ "StalineEnc", vim.bo.fileencoding:upper() },
 			"  ", -- Example for custom section

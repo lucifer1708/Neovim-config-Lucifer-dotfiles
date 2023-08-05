@@ -51,30 +51,28 @@ return packer.startup(function(use)
 			require("pairs"):setup()
 		end,
 	})
-	--     use("windwp/nvim-autopairs")  -- Autopairs, integrates with both cmp and treesitter
 	use("kyazdani42/nvim-web-devicons")
 	use("kyazdani42/nvim-tree.lua")
 	use("akinsho/bufferline.nvim")
 	use("moll/vim-bbye")
-	-- use("nvim-lualine/lualine.nvim")
 
-	use("tamton-aquib/staline.nvim")
+	use({
+		"nvim-lualine/lualine.nvim",
+		requires = { "nvim-tree/nvim-web-devicons", opt = true },
+	})
 	use("akinsho/toggleterm.nvim")
 	use("ahmedkhalf/project.nvim")
 	use("lewis6991/impatient.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
 	use("goolord/alpha-nvim")
-	use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight
 	use("folke/which-key.nvim")
 	use("karb94/neoscroll.nvim")
 	use("terrortylor/nvim-comment") -- Easily comment stuff
 
 	-- Colorschemes
-	use("olimorris/onedarkpro.nvim")
-	use("tiagovla/tokyodark.nvim")
-	use({ "Everblush/nvim", as = "everblush" })
-	use("marko-cerovac/material.nvim")
-	use({ "Th3Whit3Wolf/one-nvim" })
+	use("rktjmp/lush.nvim")
+	use("kartikp10/noctis.nvim")
+	use({ "rose-pine/neovim", as = "rose-pine" })
 	-- Completion
 	use({ "ms-jpq/coq_nvim", branch = "coq" })
 	use({ "ms-jpq/coq.artifacts", branch = "artifacts" })
@@ -121,14 +119,10 @@ return packer.startup(function(use)
 	use("mg979/vim-visual-multi")
 	-- Git
 	use("lewis6991/gitsigns.nvim")
-	-- install without yarn or npm
-	-- use({
-	--      "iamcco/markdown-preview.nvim",
-	--      run = function() vim.fn["mkdp#util#install"]() end,
-	-- })
+	-- Leap
+	use("ggandor/leap.nvim")
+	use("nathom/filetype.nvim")
 
-	-- Code runner
-	use({ "michaelb/sniprun", run = "bash ./install.sh" })
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then

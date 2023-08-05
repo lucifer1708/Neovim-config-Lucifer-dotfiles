@@ -10,7 +10,10 @@ null_ls.setup({
 	sources = {
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.stylua,
-		null_ls.builtins.formatting.isort,
+		formatting.isort,
+		formatting.autoflake.with({ extra_args = { "--remove-all-unused-imports", "--remove-unused-variables" } }),
+		-- formatting.eslint,
+		-- diagnostics.eslint,
 		diagnostics.flake8.with({ extra_args = { "--max-line-length", "150" } }),
 	},
 	-- you can reuse a shared lspconfig on_attach callback here
