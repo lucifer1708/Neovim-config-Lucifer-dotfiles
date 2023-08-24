@@ -70,20 +70,17 @@ return packer.startup(function(use)
 	use("terrortylor/nvim-comment") -- Easily comment stuff
 
 	-- Colorschemes
-	use("rktjmp/lush.nvim")
-	use("kartikp10/noctis.nvim")
 	use({ "rose-pine/neovim", as = "rose-pine" })
-	-- Completion
-	use({ "ms-jpq/coq_nvim", branch = "coq" })
-	use({ "ms-jpq/coq.artifacts", branch = "artifacts" })
-	use({ "ms-jpq/coq.thirdparty", branch = "3p" })
-
-	--      -- LSP Support
+	-- LSP Support
 	use({ "neovim/nvim-lspconfig" })
 	use({ "williamboman/mason.nvim" })
 	use({ "williamboman/mason-lspconfig.nvim" })
-	-- Autocompletion
-	use({ "github/copilot.vim" })
+	use({
+		"L3MON4D3/LuaSnip",
+		tag = "v2.*",
+		-- install jsregexp (optional!:).
+		run = "make install_jsregexp",
+	})
 	use({
 		"VonHeikemen/lsp-zero.nvim",
 		requires = {
@@ -92,8 +89,11 @@ return packer.startup(function(use)
 			{ "williamboman/mason.nvim" },
 			{ "williamboman/mason-lspconfig.nvim" },
 			-- Snippets
-			{ "L3MON4D3/LuaSnip" },
 			{ "rafamadriz/friendly-snippets" },
+			-- Autocompletion
+			{ "hrsh7th/nvim-cmp" }, -- Required
+			{ "hrsh7th/cmp-nvim-lsp" }, -- Required
+			{ "L3MON4D3/LuaSnip" }, -- Required
 		},
 	})
 	use({ "ibhagwan/fzf-lua", requires = { "kyazdani42/nvim-web-devicons" } })
@@ -121,7 +121,15 @@ return packer.startup(function(use)
 	use("lewis6991/gitsigns.nvim")
 	-- Leap
 	use("ggandor/leap.nvim")
-	use("nathom/filetype.nvim")
+	-- use("nathom/filetype.nvim")
+	-- use({
+	-- 	"zbirenbaum/copilot-cmp",
+	-- 	after = { "copilot.lua" },
+	-- 	config = function()
+	-- 		require("copilot_cmp").setup()
+	-- 	end,
+	-- })
+	use({ "saadparwaiz1/cmp_luasnip" })
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
