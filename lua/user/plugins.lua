@@ -51,8 +51,8 @@ return packer.startup(function(use)
 			require("pairs"):setup()
 		end,
 	})
-	use("kyazdani42/nvim-web-devicons")
-	use("kyazdani42/nvim-tree.lua")
+	use("nvim-tree/nvim-web-devicons")
+	use("nvim-tree/nvim-tree.lua")
 	use("akinsho/bufferline.nvim")
 	use("moll/vim-bbye")
 
@@ -68,6 +68,11 @@ return packer.startup(function(use)
 	use("folke/which-key.nvim")
 	use("karb94/neoscroll.nvim")
 	use("terrortylor/nvim-comment") -- Easily comment stuff
+	use("hrsh7th/cmp-nvim-lsp")
+	use("hrsh7th/cmp-buffer")
+	use("hrsh7th/cmp-path")
+	use("hrsh7th/cmp-cmdline")
+	use("hrsh7th/nvim-cmp")
 
 	-- Colorschemes
 	use({ "rose-pine/neovim", as = "rose-pine" })

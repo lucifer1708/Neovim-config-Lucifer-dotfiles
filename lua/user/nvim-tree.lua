@@ -1,191 +1,23 @@
--- following options are the default
--- each of these are documented in `:help nvim-tree.OPTION_NAME`
--- vim.g.nvim_tree_icons = {
--- 	default = "",
--- 	symlink = "",
--- 	git = {
--- 		unstaged = "",
--- 		staged = "S",
--- 		unmerged = "",
--- 		renamed = "➜",
--- 		deleted = "",
--- 		untracked = "U",
--- 		ignored = "◌",
--- 	},
--- 	folder = {
--- 		default = "",
--- 		open = "",
--- 		empty = "",
--- 		empty_open = "",
--- 		symlink = "",
--- 	},
--- }
+-- disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
-local status_ok, nvim_tree = pcall(require, "nvim-tree")
-if not status_ok then
-     return
-end
+-- set termguicolors to enable highlight groups
+vim.opt.termguicolors = true
 
-local config_status_ok, nvim_tree_config = pcall(require, "nvim-tree.config")
-if not config_status_ok then
-     return
-end
+-- empty setup using defaults
+require("nvim-tree").setup()
 
-local tree_cb = nvim_tree_config.nvim_tree_callback
-
---nvim_tree.setup {
---  disable_netrw = true,
---  hijack_netrw = true,
---  open_on_setup = false,
---  ignore_ft_on_setup = {
---    "startify",
---    "dashboard",
---    "alpha",
---  },
---  auto_open= true,
---  open_on_tab = false,
---  hijack_cursor = false,
---  update_cwd = true,
---  update_to_buf_dir = {
---    enable = true,
---    auto_open = true,
---  },
---  diagnostics = {
---    enable = true,
---    icons = {
---      hint = "",
---      info = "",
---      warning = "",
---      error = "",
---    },
---  },
---  update_focused_file = {
---    enable = true,
---    update_cwd = true,
---    ignore_list = {},
---  },
---  system_open = {
---    cmd = nil,
---    args = {},
---  },
---  filters = {
---    dotfiles = false,
---    custom = {},
---  },
---  git = {
---    enable = true,icons = {
--- webdev_colors = true,
--- git_placement = "before",
--- padding = " ",
--- symlink_arrow = " ➛ ",
--- show = {
---   file = true,
---   folder = true,
---   folder_arrow = true,
---   git = true,
--- },
--- glyphs = {
---   default = "",
---   symlink = "",
---   folder = {
---     arrow_closed = "",
---     arrow_open = "",
---     default = "",
---     open = "",
---     empty = "",
---     empty_open = "",
---     symlink = "",
---     symlink_open = "",
---   },
---   git = {
---     unstaged = "✗",
---     staged = "✓",
---     unmerged = "",
---     renamed = "➜",
---     untracked = "★",
---     deleted = "",
---     ignored = "◌",
---   },
--- },
--- },
---    ignore = true,
---    timeout = 500,
---  },
---  view = {
---    width = 30,
---    height = 30,
---    hide_root_folder = false,
---    side = "left",
---    auto_resize = true,
---    mappings = {
---      custom_only = false,
---      list = {
---        { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
---        { key = "h", cb = tree_cb "close_node" },
---        { key = "v", cb = tree_cb "vsplit" },
---      },
---    },
---    number = false,
---    relativenumber = false,
---  },
---  trash = {
---    cmd = "trash",
---    require_confirm = true,
---  },
-----  quit_on_open = false,
-----  window_picker = true,
--- open_file = {
---          quit_on_open = false,
---          resize_window = false,
---          window_picker = {
---            enable = true,
---            chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890",
---            exclude = {
---              filetype = { "notify", "packer", "qf", "diff", "fugitive", "fugitiveblame" },
---              buftype = { "nofile", "terminal", "help" },
---            },
---          },
---        },
---  git_hl = 1,
---  root_folder_modifier = ":t",
---  show_icons = {
---    git = 1,
---    folders = 1,
---    files = 1,
---    folder_arrows = 1,
---    tree_width = 30,
---  },
---}
-
-nvim_tree.setup({
-                  -- BEGIN_DEFAULT_OPTS
+require("nvim-tree").setup({
      auto_reload_on_write = true,
      disable_netrw = false,
      hijack_cursor = false,
      hijack_netrw = true,
      hijack_unnamed_buffer_when_opening = false,
-     -- ignore_buffer_on_setup = false,
-     -- open_on_setup = false,
-     -- open_on_setup_file = false,
      open_on_tab = false,
      sort_by = "name",
      update_cwd = false,
      reload_on_bufenter = false,
-     view = {
-          width = 30,
-          hide_root_folder = false,
-          side = "left",
-          preserve_window_proportions = false,
-          number = false,
-          relativenumber = false,
-          signcolumn = "yes",
-          mappings = {
-               custom_only = false,
-               list = {
-                    -- user mappings go here
-               },
-          },
-     },
      renderer = {
           indent_markers = {
                enable = true,
@@ -195,10 +27,6 @@ nvim_tree.setup({
                     none = "  ",
                },
           },
-          -- icons = {
-          -- 	webdev_colors = true,
-          -- 	git_placement = "before",
-          -- },
           icons = {
                webdev_colors = true,
                git_placement = "before",
@@ -310,3 +138,43 @@ nvim_tree.setup({
           },
      },
 })
+
+require'nvim-web-devicons'.setup {
+ override = {
+  zsh = {
+    icon = "",
+    color = "#428850",
+    cterm_color = "65",
+    name = "Zsh"
+  }
+ };
+ -- globally enable different highlight colors per icon (default to true)
+ -- if set to false all icons will have the default icon's color
+ color_icons = true;
+ -- globally enable default icons (default to false)
+ -- will get overriden by `get_icons` option
+ default = true;
+ -- globally enable "strict" selection of icons - icon will be looked up in
+ -- different tables, first by filename, and if not found by extension; this
+ -- prevents cases when file doesn't have any extension but still gets some icon
+ -- because its name happened to match some extension (default to false)
+ strict = true;
+ -- same as `override` but specifically for overrides by filename
+ -- takes effect when `strict` is true
+ override_by_filename = {
+  [".gitignore"] = {
+    icon = "",
+    color = "#f1502f",
+    name = "Gitignore"
+  }
+ };
+ -- same as `override` but specifically for overrides by extension
+ -- takes effect when `strict` is true
+ override_by_extension = {
+  ["log"] = {
+    icon = "",
+    color = "#81e043",
+    name = "Log"
+  }
+ };
+}
