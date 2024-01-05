@@ -1,6 +1,4 @@
-require("mason").setup()
-require("mason-lspconfig").setup()
-require("leap").add_default_mappings()
+-- vim.g.did_load_filetypes = 1
 require("user.options")
 require("user.lsp-zero")
 require("user.lsp")
@@ -12,9 +10,7 @@ require("user.treesitter")
 require("user.gitsigns")
 require("user.nvim-tree")
 require("user.bufferline")
-require("user.lualine")
 require("user.toggleterm")
-require("user.project")
 require("user.impatient")
 require("user.indentline")
 require("user.alpha")
@@ -22,8 +18,36 @@ require("user.whichkey")
 require("user.autocommands")
 require("user.fzf")
 require("user.nvim-comment")
-require("user.colorizer")
-require("user.neoscroll")
 require("user.colorscheme")
 require("user.gopls")
 require("user.bashls")
+
+local fn, cmd = vim.fn, vim.cmd
+
+local function branch_name()
+	local branch = vim.fn.system("git branch --show-current 2> /dev/null | tr -d '\n'")
+	if branch ~= "" then
+		return branch
+	else
+		return ""
+	end
+end
+
+function my_statusline()
+	local branch = branch_name()
+
+	if branch and #branch > 0 then
+		branch = "  " .. branch
+	end
+
+	return branch .. " %f%m%=%l:%c"
+end
+
+cmd([[ set statusline=%!luaeval('my_statusline()') ]])
+
+require("bufdel").setup({
+	next = "tabs",
+	quit = true, -- quit Neovim when last buffer is closed
+})
+
+

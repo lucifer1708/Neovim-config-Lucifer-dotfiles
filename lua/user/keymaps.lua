@@ -1,5 +1,7 @@
 local opts = { noremap = true, silent = true }
 
+--local crates = require("crates")
+
 local term_opts = { silent = true }
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
@@ -38,7 +40,7 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
 
 -- Buffer Close
-keymap("n", "<C-c>", ":Bdelete<CR>", opts)
+keymap("n", "<C-c>", ":BufDel<CR>", opts)
 
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
@@ -83,3 +85,4 @@ keymap("i", "<C-s>", "<Esc>:w<CR>a", opts)
 -- For Running the code using Sniprun
 keymap("n", "<A-R>", ":SnipRun<CR>", opts)
 keymap("v", "<A-R>", ":SnipRun<CR>", opts)
+

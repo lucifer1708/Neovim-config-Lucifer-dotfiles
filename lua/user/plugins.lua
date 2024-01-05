@@ -45,45 +45,35 @@ return packer.startup(function(use)
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
 	use({
-		"ZhiyuanLck/smart-pairs",
-		event = "InsertEnter",
+		"windwp/nvim-autopairs",
 		config = function()
-			require("pairs"):setup()
+			require("nvim-autopairs").setup({})
 		end,
 	})
 	use("nvim-tree/nvim-web-devicons")
 	use("nvim-tree/nvim-tree.lua")
 	use("akinsho/bufferline.nvim")
-	use("moll/vim-bbye")
-
+	use({ "ojroques/nvim-bufdel" })
 	use({
 		"nvim-lualine/lualine.nvim",
 		requires = { "nvim-tree/nvim-web-devicons", opt = true },
 	})
 	use("akinsho/toggleterm.nvim")
-	use("ahmedkhalf/project.nvim")
 	use("lewis6991/impatient.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
 	use("goolord/alpha-nvim")
 	use("folke/which-key.nvim")
-	use("karb94/neoscroll.nvim")
 	use("terrortylor/nvim-comment") -- Easily comment stuff
 	use("hrsh7th/cmp-nvim-lsp")
 	use("hrsh7th/cmp-buffer")
 	use("hrsh7th/cmp-path")
 	use("hrsh7th/cmp-cmdline")
 	use("hrsh7th/nvim-cmp")
-
-	-- Colorschemes
-	use({ "rose-pine/neovim", as = "rose-pine" })
-	-- LSP Support
 	use({ "neovim/nvim-lspconfig" })
 	use({ "williamboman/mason.nvim" })
 	use({ "williamboman/mason-lspconfig.nvim" })
 	use({
 		"L3MON4D3/LuaSnip",
-		tag = "v2.*",
-		-- install jsregexp (optional!:).
 		run = "make install_jsregexp",
 	})
 	use({
@@ -102,42 +92,23 @@ return packer.startup(function(use)
 		},
 	})
 	use({ "ibhagwan/fzf-lua", requires = { "kyazdani42/nvim-web-devicons" } })
-
-	-- snippets
-	use("uga-rosa/ccc.nvim")
-	-- LSP
-	-- use("neovim/nvim-lspconfig") -- enable LSP
 	use("williamboman/nvim-lsp-installer") -- simple to use language server installer
 	use("tamago324/nlsp-settings.nvim") -- language server settings defined in json form
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
-
-	-- Telescope
 	use("nvim-telescope/telescope.nvim")
-
-	-- Treesitter
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 	})
 	use("JoosepAlviste/nvim-ts-context-commentstring")
-
-	use("mg979/vim-visual-multi")
-	-- Git
+	use("tpope/vim-fugitive")
 	use("lewis6991/gitsigns.nvim")
-	-- Leap
-	use("ggandor/leap.nvim")
 	-- use("nathom/filetype.nvim")
-	-- use({
-	-- 	"zbirenbaum/copilot-cmp",
-	-- 	after = { "copilot.lua" },
-	-- 	config = function()
-	-- 		require("copilot_cmp").setup()
-	-- 	end,
-	-- })
 	use({ "saadparwaiz1/cmp_luasnip" })
-
-	-- Automatically set up your configuration after cloning packer.nvim
-	-- Put this at the end after all plugins
+	use("hrsh7th/cmp-vsnip")
+	use("hrsh7th/vim-vsnip")
+	use("hrsh7th/vim-vsnip-integ")
+	use({ "catppuccin/nvim", as = "catppuccin" })
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end

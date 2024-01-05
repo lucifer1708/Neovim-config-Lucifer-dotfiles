@@ -8,7 +8,9 @@ local check_backspace = function()
 end
 
 local cmp = require("cmp")
+local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 local cmp_action = require("lsp-zero").cmp_action()
+require("luasnip.loaders.from_vscode").lazy_load()
 cmp.setup({
 	mapping = cmp.mapping.preset.insert({
 		-- `Enter` key to confirm completion
@@ -55,11 +57,18 @@ cmp.setup({
 		}),
 	}),
 
+	snippet = {
+		expand = function(args)
+			require("luasnip").lsp_expand(args.body)
+		end,
+	},
 	sources = {
 		{ name = "nvim_lsp" },
 		{ name = "luasnip" },
+		{ name = "vsnip" },
 		-- { name = "copilot" },
 		{ name = "buffer" },
 		{ name = "path" },
 	},
 })
+cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
