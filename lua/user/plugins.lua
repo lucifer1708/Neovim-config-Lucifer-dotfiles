@@ -106,7 +106,6 @@ return packer.startup(function(use)
 	-- use("nathom/filetype.nvim")
 	use({ "saadparwaiz1/cmp_luasnip" })
 	use("hrsh7th/cmp-vsnip")
-	use("hrsh7th/vim-vsnip")
 	use("hrsh7th/vim-vsnip-integ")
 	use({ "catppuccin/nvim", as = "catppuccin" })
 	if PACKER_BOOTSTRAP then
