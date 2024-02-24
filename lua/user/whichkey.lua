@@ -95,10 +95,10 @@ local mappings = {
 		"Show Errors",
 	},
 	["f"] = {
-		"<cmd>FzfLua files<cr>",
+		"<cmd>Telescope find_files<cr>",
 		"Find files",
 	},
-	["F"] = { "<cmd>FzfLua live_grep<cr>", "Find Text" },
+	["F"] = { "<cmd>Telescope live_grep<cr>", "Find Text" },
 	p = {
 		name = "Packer",
 		c = { "<cmd>PackerCompile<cr>", "Compile" },

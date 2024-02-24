@@ -33,6 +33,7 @@ dashboard.section.header.val = {
 dashboard.section.buttons.val = {
 	dashboard.button("f", "  Find file", ":FzfLua files <CR>"),
 	dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
+	dashboard.button("p", "  Projects", ":Telescope projects<CR>"),
 	dashboard.button("r", "  Recently used files", ":Telescope oldfiles <CR>"),
 	dashboard.button("t", "  Find text", ":FzfLua live_grep<CR>"),
 	dashboard.button("c", "  Configuration", ":e ~/.config/nvim/init.lua <CR>"),

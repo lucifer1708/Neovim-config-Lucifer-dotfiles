@@ -46,7 +46,7 @@ require'fzf-lua'.setup {
       scrollborder_f = 'FloatBorder',   -- scrollbar "full" section highlight
     }, ]]
     preview = {
-      default     = 'bat',           -- override the default previewer?
+      default     = 'batcat',           -- override the default previewer?
                                         -- default uses the 'builtin' previewer
       border         = 'border',        -- border|noborder, applies only to
                                         -- native fzf previewers (bat/cat/git/etc)
@@ -206,7 +206,7 @@ require'fzf-lua'.setup {
       cmd             = "man -c %s | col -bx",
     },
     builtin = {
-      syntax          = false,         -- preview syntax highlight?
+      syntax          = true,         -- preview syntax highlight?
       syntax_limit_l  = 0,            -- syntax limit (lines), 0=nolimit
       syntax_limit_b  = 1024*1024,    -- syntax limit (bytes), 0=nolimit
       limit_b         = 1024*1024*10, -- preview limit (bytes), 0=nolimit
@@ -228,7 +228,7 @@ require'fzf-lua'.setup {
   },
   -- provider setup
   files = {
-    -- previewer      = "bat",          -- uncomment to override previewer
+    previewer      = "batcat",          -- uncomment to override previewer
                                         -- (name from 'previewers' table)
                                         -- set to 'false' to disable
     prompt            = 'Files❯ ',
