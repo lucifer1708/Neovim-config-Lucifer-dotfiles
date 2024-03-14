@@ -52,7 +52,7 @@ return packer.startup(function(use)
      })
      use("nvim-tree/nvim-web-devicons")
      use("nvim-tree/nvim-tree.lua")
-     use("akinsho/bufferline.nvim")
+     -- use("akinsho/bufferline.nvim")
      use({ "ojroques/nvim-bufdel" })
      use({
           "nvim-lualine/lualine.nvim",
@@ -63,7 +63,7 @@ return packer.startup(function(use)
      use("lukas-reineke/indent-blankline.nvim")
      use("goolord/alpha-nvim")
      use("folke/which-key.nvim")
-     use("terrortylor/nvim-comment") -- Easily comment stuff
+     -- use("terrortylor/nvim-comment") -- Easily comment stuff
      use("hrsh7th/cmp-nvim-lsp")
      use("hrsh7th/cmp-buffer")
      use("hrsh7th/cmp-path")

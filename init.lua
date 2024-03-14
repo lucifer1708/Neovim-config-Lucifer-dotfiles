@@ -9,7 +9,6 @@ require("user.telescope")
 require("user.treesitter")
 require("user.gitsigns")
 require("user.nvim-tree")
--- require("user.bufferline")
 require("user.toggleterm")
 require("user.impatient")
 require("user.indentline")
@@ -17,7 +16,6 @@ require("user.alpha")
 require("user.whichkey")
 require("user.autocommands")
 require("user.fzf")
---require("user.nvim-comment")
 require("user.comment")
 require("user.colorscheme")
 require("user.gopls")
@@ -26,7 +24,7 @@ require("user.bashls")
 local fn, cmd = vim.fn, vim.cmd
 
 local function branch_name()
-	local branch = vim.fn.system("git branch --show-current 2> /dev/null | tr -d '\n'")
+	local branch = fn.system("git branch --show-current 2> /dev/null | tr -d '\n'")
 	if branch ~= "" then
 		return branch
 	else
@@ -48,5 +46,5 @@ cmd([[ set statusline=%!luaeval('my_statusline()') ]])
 
 require("bufdel").setup({
 	next = "tabs",
-	quit = true, -- quit Neovim when last buffer is closed
+	quit = true,
 })
