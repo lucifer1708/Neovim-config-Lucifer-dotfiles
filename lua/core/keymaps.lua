@@ -1,3 +1,4 @@
+-- Blazingly fast way out of insert mode
 local opts = { noremap = true, silent = true }
 
 --local crates = require("crates")

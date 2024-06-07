@@ -1,3 +1,7 @@
+return {
+	{
+		"folke/which-key.nvim",
+		config = function()
 local status_ok, which_key = pcall(require, "which-key")
 if not status_ok then
 	return
@@ -84,7 +88,7 @@ local mappings = {
 		"<cmd>FzfLua buffers<cr>",
 		"Buffers",
 	},
-	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
+	["e"] = { "<cmd>NeoTreeFocusToggle<cr>", "Explorer" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
 	["/"] = { "<cmd>CommentToggle<CR>", "Comment line?" },
 	["q"] = { "<cmd>q!<CR>", "Quit" },
@@ -185,3 +189,6 @@ local mappings = {
 
 which_key.setup(setup)
 which_key.register(mappings, opts)
+		end
+	}
+}

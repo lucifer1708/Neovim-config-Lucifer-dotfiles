@@ -1,10 +1,21 @@
+-- Telescope fuzzy finding (all the things)
+return {
+	{
+		"nvim-telescope/telescope.nvim",
+		branch = "0.1.x",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			-- Fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
+			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make", cond = vim.fn.executable("make") == 1 },
+		},
+		config = function()
 local status_ok, telescope = pcall(require, "telescope")
 if not status_ok then
      return
 end
 
 local actions = require("telescope.actions")
-require("telescope").load_extension("projects")
+-- require("telescope").load_extension("projects")
 
 telescope.setup({
      defaults = {
@@ -97,3 +108,6 @@ telescope.setup({
           -- please take a look at the readme of the extension you want to configure
      },
 })
+		end,
+	},
+}
