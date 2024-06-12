@@ -4,6 +4,7 @@ return {
 		dependencies = {
 			"williamboman/mason.nvim",
 			"williamboman/mason-lspconfig.nvim",
+			{ "VonHeikemen/lsp-zero.nvim", version = "v3.x" },
 			{
 				"j-hui/fidget.nvim",
 				tag = "legacy",
@@ -17,20 +18,19 @@ return {
 			-- Set up Mason before anything else
 			--
 			local lsp_zero = require("lsp-zero")
-			lsp_zero.preset("recommeded")
-
+			-- lsp_zero.preset("recommeded")
+			--
+			-- lsp_zero.on_attach(function(client, bufnr)
+			-- 	lsp_zero.default_keymaps({ buffer = bufnr })
+			-- end)
 			require("lspconfig").intelephense.setup({})
 
 			require("mason").setup()
 			require("mason-lspconfig").setup()
 
-			lsp_zero.on_attach(function(client, bufnr)
-				lsp_zero.default_keymaps({ buffer = bufnr })
-			end)
-
 			require("mason").setup({})
 			require("mason-lspconfig").setup({
-				ensure_installed = { "tsserver", "rust_analyzer" },
+				ensure_installed = { "tsserver", "rust_analyzer", "gopls" },
 				handlers = {
 					lsp_zero.default_setup,
 				},
@@ -81,7 +81,7 @@ return {
 				lsp_map("<leader>ld", vim.lsp.buf.type_definition, bufnr, "Type definition")
 				lsp_map("<leader>ls", require("telescope.builtin").lsp_document_symbols, bufnr, "Document symbols")
 
-				lsp_map("gd", vim.lsp.buf.definition, bufnr, "Goto Definition")
+				-- lsp_map("gd", , bufnr, "Goto Definition")
 				lsp_map("gr", require("telescope.builtin").lsp_references, bufnr, "Goto References")
 				lsp_map("gI", vim.lsp.buf.implementation, bufnr, "Goto Implementation")
 				lsp_map("K", vim.lsp.buf.hover, bufnr, "Hover Documentation")
@@ -92,7 +92,7 @@ return {
 					vim.lsp.buf.format()
 				end, { desc = "Format current buffer with LSP" })
 
-				lsp_map("<leader>ff", "<cmd>Format<cr>", bufnr, "Format")
+				-- lsp_map("<leader>ff", "<cmd>Format<cr>", bufnr, "Format")
 
 				-- Attach and configure vim-illuminate
 				require("illuminate").on_attach(client)

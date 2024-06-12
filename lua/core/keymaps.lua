@@ -1,4 +1,4 @@
--- Blazingly fast way out of insert mode
+-- Blazingly fast way out of insemt mode
 local opts = { noremap = true, silent = true }
 
 --local crates = require("crates")
@@ -36,9 +36,12 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 -- Navigate buffers
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "gd", ":Lspsaga  goto_definition<CR>", opts)
+keymap("n", "gp", ":Lspsaga  peek_definition<CR>", opts)
+keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Nvim Tree
-keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
+keymap("n", "<C-n>", ":NeoTreeFocusToggle<CR>", opts)
 
 -- Buffer Close
 keymap("n", "<C-c>", ":BufDel<CR>", opts)
@@ -86,4 +89,3 @@ keymap("i", "<C-s>", "<Esc>:w<CR>a", opts)
 -- For Running the code using Sniprun
 keymap("n", "<A-R>", ":SnipRun<CR>", opts)
 keymap("v", "<A-R>", ":SnipRun<CR>", opts)
-

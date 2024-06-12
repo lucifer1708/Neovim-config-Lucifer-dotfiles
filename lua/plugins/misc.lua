@@ -21,4 +21,14 @@ return {
 	},
 	"tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 	"tpope/vim-surround", -- Surround stuff with the ys-, cs-, ds- commands
+	{
+		"ahmedkhalf/project.nvim",
+		config = function()
+			require("project_nvim").setup({
+				manual_mode = false,
+
+				patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json" },
+			})
+		end,
+	},
 }

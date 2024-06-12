@@ -4,9 +4,8 @@ return {
 		"hrsh7th/nvim-cmp",
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
-			{ 'VonHeikemen/lsp-zero.nvim', version = 'v3.x' },
 			"hrsh7th/cmp-nvim-lua",
-			'windwp/nvim-autopairs',
+			"windwp/nvim-autopairs",
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-path",
 			"L3MON4D3/LuaSnip",
@@ -25,7 +24,7 @@ return {
 
 			local cmp = require("cmp")
 			local cmp_autopairs = require("nvim-autopairs.completion.cmp")
-			local cmp_action = require("lsp-zero").cmp_action()
+			-- local cmp_action = require("lsp-zero").cmp_action()
 			require("luasnip.loaders.from_vscode").lazy_load()
 			cmp.setup({
 				mapping = cmp.mapping.preset.insert({
@@ -36,8 +35,8 @@ return {
 					["<C-Space>"] = cmp.mapping.complete(),
 
 					-- Navigate between snippet placeholder
-					["<C-f>"] = cmp_action.luasnip_jump_forward(),
-					["<C-b>"] = cmp_action.luasnip_jump_backward(),
+					-- ["<C-f>"] = cmp_action.luasnip_jump_forward(),
+					-- ["<C-b>"] = cmp_action.luasnip_jump_backward(),
 
 					-- Scroll up and down in the completion documentation
 					["<C-u>"] = cmp.mapping.scroll_docs(-4),
