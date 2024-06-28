@@ -88,15 +88,15 @@ return {
 					"<cmd>FzfLua buffers<cr>",
 					"Buffers",
 				},
-				["e"] = { "<cmd>NeoTreeFocusToggle<cr>", "Explorer" },
+				["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
 				["w"] = { "<cmd>w!<CR>", "Save" },
 				["/"] = { "<cmd>CommentToggle<CR>", "Comment line?" },
 				["q"] = { "<cmd>q!<CR>", "Quit" },
-				["P"] = { "<cmd>Telescope projects<CR>", "Quit" },
+				["P"] = { "<cmd>Telescope projects<CR>", "projects" },
 				["k"] = { "<cmd>BufDel!<CR>", "Close Buffer" },
 				["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
 				["d"] = {
-					"<cmd>lua vim.diagnostic.open_float()<cr>",
+					"<cmd>Lspsaga show_line_diagnostics<cr>",
 					"Show Errors",
 				},
 				["F"] = { "<cmd>Telescope live_grep<cr>", "Find Text" },
@@ -114,7 +114,7 @@ return {
 				},
 				g = {
 					name = "Git",
-					g = { "<cmd>lua _LAZYGIT_TOGGLE()<CR>", "Lazygit" },
+					g = { "<cmd>Fugit2<CR>", "Lazygit" },
 					j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
 					k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
 					l = { "<cmd>lua require 'gitsigns'.blame_line()<cr>", "Blame" },
@@ -136,13 +136,17 @@ return {
 				},
 				l = {
 					name = "LSP",
-					a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
+					a = { "<cmd>Lspsaga code_action<cr>", "Code Action" },
+					c = {
+						"<cmd>Lspsaga show_cursor_diagnostics<cr>",
+						"Document Diagnostics",
+					},
 					d = {
-						"<cmd>Telescope lsp_document_diagnostics<cr>",
+						"<cmd>Lspsaga show_buf_diagnostics<cr>",
 						"Document Diagnostics",
 					},
 					w = {
-						"<cmd>Telescope lsp_workspace_diagnostics<cr>",
+						"<cmd>Lspsaga show_workspace_diagnostics<cr>",
 						"Workspace Diagnostics",
 					},
 					f = { "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", "Format" },

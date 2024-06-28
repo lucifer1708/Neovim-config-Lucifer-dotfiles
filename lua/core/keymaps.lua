@@ -38,10 +38,11 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "gd", ":Lspsaga  goto_definition<CR>", opts)
 keymap("n", "gp", ":Lspsaga  peek_definition<CR>", opts)
+keymap("n", "gt", ":Lspsaga  goto_type_definition<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Nvim Tree
-keymap("n", "<C-n>", ":NeoTreeFocusToggle<CR>", opts)
+keymap("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
 
 -- Buffer Close
 keymap("n", "<C-c>", ":BufDel<CR>", opts)
@@ -80,9 +81,8 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 -- Saving And Quiting vim
 keymap("n", "<C-s>", ":w<CR>", opts)
-keymap("n", "<C-q>", ":q<CR>", opts)
-keymap("i", "<C-q>", "<Esc>:q<CR>", opts)
 keymap("n", "<A-q>", ":q!<CR>", opts)
+keymap("n", "<C-q>", ":q<CR>", opts)
 keymap("i", "<A-q>", "<Esc>:q!<CR>", opts)
 keymap("i", "<C-s>", "<Esc>:w<CR>a", opts)
 

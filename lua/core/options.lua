@@ -32,7 +32,7 @@ local options = {
 	wrap = true, -- display lines as one long line
 	scrolloff = 4,
 	sidescrolloff = 8,
-	--guifont = "CaskaydiaCove Nerd Font Mono:h11", -- the font used in graphical neovim applications
+	guifont = "CaskaydiaCove Nerd Font:h12", -- the font used in graphical neovim applications
 	-- guicursor="a:blinkon100",
 }
 
@@ -41,6 +41,10 @@ vim.opt.shortmess:append("c")
 for k, v in pairs(options) do
 	vim.opt[k] = v
 end
+
+
+-- vim.g.neovide_transparency = 0.8
+vim.g.transparency = 0.95
 
 vim.cmd("set whichwrap+=<,>,[,],h,l")
 vim.cmd([[set iskeyword+=-]])
