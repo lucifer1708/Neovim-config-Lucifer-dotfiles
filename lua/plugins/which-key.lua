@@ -92,7 +92,6 @@ return {
 				["w"] = { "<cmd>w!<CR>", "Save" },
 				["/"] = { "<cmd>CommentToggle<CR>", "Comment line?" },
 				["q"] = { "<cmd>q!<CR>", "Quit" },
-				["P"] = { "<cmd>Telescope projects<CR>", "projects" },
 				["k"] = { "<cmd>BufDel!<CR>", "Close Buffer" },
 				["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
 				["d"] = {
